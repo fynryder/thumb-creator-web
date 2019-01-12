@@ -30,9 +30,9 @@ These are the following steps to install the project.
 This is will start node on port 3000, which can be modified from config.js
 Once done navigate to browser and hit ```http://127.0.0.1:3000```
 
-## Deployment
+## Overview
+![alt text](https://github.com/fynryder/thumb-creator/blob/master/controlflow.jpg)
 
-Repeat above steps to deploy on production
 ## Built With
 
 * [AngularJs](https://angularjs.org/) - Javascript Framework
