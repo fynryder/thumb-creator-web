@@ -7,10 +7,11 @@
           <div class="file-field input-field" style="margin-left: 25%; width: 40% !important;">
               <div class="btn">
                 <span>File</span>
-                <input type="file" ngf-select ng-model="file" name="file">
+                <input type="file" ngf-select ng-model="file" ngf-pattern="'image/*'"
+                ngf-accept="'image/*'" ngf-max-size="5 MB" name="file">
               </div>
               <div class="file-path-wrapper">
-                <input class="file-path validate"  type="text" placeholder="Upload one or more files">
+                <input class="file-path validate"  type="text" placeholder="Upload Image file, Max size 5 MB">
               </div>
             </div>
             <a ng-click = "uploadFile()" style="margin-left: 40%;" class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>Upload</a>
