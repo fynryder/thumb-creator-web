@@ -1,0 +1,8 @@
+{	
+	"chatserver" : "localhost",
+	"serverport" : "3000",
+	"mysqlUserName" : "root",
+	"mysqlPassword" : "Mukesh@123",
+	"mysqlHost" : "localhost",
+	"mysqlDatabase" : "Imageprocessor"
+}

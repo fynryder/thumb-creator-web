@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ease-thumb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Avenues Book Inc</title>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/materialize.min.css">
+<link rel="stylesheet" href="css/jquery.enjoyhint.css">
+<link rel="stylesheet" href="css/pretty.css">
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/angular.min.js"></script>
+
+<script src="js/vendor/angular-ui-router.min.js"></script>
+<script src="js/vendor/angular-animate.min.js"></script>
+<script src="js/vendor/spin.min.js"></script>
+<script src="js/vendor/treasure-overlay-spinner.js"></script>
+
+<script src="js/vendor/materialize.min.js"></script>
+<script src="js/vendor/moment.min.js"></script>
+<script src="js/vendor/notify.min.js"></script>
+<script src="js/vendor/ng-file-upload-all.min.js"></script>
+<script src="js/init.js"></script>
+
+</head>
+<body>
+
+ <span us-spinner="{radius:10, width:4, length: 8}"></span>
+	<div ui-view='navigation'></div>
+	<main>
+		<div ui-view='container'></div>
+	</main>
+	
+		<div ui-view='footer'></div>
+	
+	
+	<!-- 	<a href="#" data-activates="slide-out" class="button-collapse"><i
+		class="material-icons">menu</i></a> -->
+			<script src="js/services/Router.js"></script>
+	<script src="js/services/User.js"></script>
+	<script src="js/controller/dashboard-controller.js"></script>
+
+</body>
+</html>

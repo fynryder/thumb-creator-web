@@ -1,0 +1,60 @@
+<div class="container">
+
+
+    <div class="card" style="margin-top: 20%;">
+     
+      <div class="card-content">
+          <div class="file-field input-field" style="margin-left: 25%; width: 40% !important;">
+              <div class="btn">
+                <span>File</span>
+                <input type="file" ngf-select ng-model="file" name="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate"  type="text" placeholder="Upload one or more files">
+              </div>
+            </div>
+            <a ng-click = "uploadFile()" style="margin-left: 40%;" class="waves-effect waves-light btn-small"><i class="material-icons left">cloud</i>Upload</a>
+            <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="number" ng-model = "maxHeight" class="validate"  max="640" min="10">
+                  <label class="active" for="first_name">Target Height</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="number" ng-model = "maxWidth" class="validate"  max="480" min = "10">
+                  <label class="active" for="last_name">Target Width</label>
+                </div>
+              </div>
+            <div class="progress">
+                <div class="determinate" style="width: {{progress}}%"></div>
+            </div>      
+      </div>
+      
+ 
+    </div>
+    
+  
+    <!-- Modal Structure -->
+    <div id="modal123" class="modal">
+      <div class="modal-content">
+        <h4>{{header}}</h4>
+        <p>{{message}}</p>
+      </div>
+      <div class="modal-footer">
+      <a ng-if="showAgree" href="javascript:void(0)" ng-click="getPermission()" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a ng-if="showAgree" href="javascript:void(0)" ng-click="close()" class="modal-action modal-close waves-effect waves-green btn-flat">Disagree</a>
+      <a ng-if="showWait" href="javascript:void(0)" ng-click="close()" class="modal-action modal-close waves-effect waves-green btn-flat">Lets Wait!</a>
+      </div>
+    </div>
+    
+    
+    <div id="modalpres" class="modal">
+      <div class="modal-content">
+        <h4>User Prescription</h4>
+        <div>
+          <img src="images/medical-prescription.jpg"/>
+        </div>
+      </div>
+      <div class="modal-footer">
+      <a  href="javascript:void(0)" ng-click="close()" class="modal-action modal-close waves-effect waves-green btn-flat">Got It!!</a>
+      </div>
+    </div>

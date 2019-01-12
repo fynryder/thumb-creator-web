@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="login col s12 m8 l4">
+               <form class="my-form" ng-submit="loginUser($event);" autocomplete="off">
+               <div class="card">
+               <nav style="background-color: #3c6d77;font-size: 1.4em"><span style="margin-left: 30px;margin-top: 5%;">{{loginStatus}}</span><span ng-show="loginStatus === 'Authenticating..'" class="saving" style="position:relative; 15px;bottom: 4px"><i>&nbsp;</i></span></nav>
+               <div class="card-content">
+               <div ng-if="isError" style="text-align: center;color:red">{{$parent.errorMessage}}</div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input id="user_id" name="user_id" type="text" ng-model="userName" required="required" class="validate" autocomplete="false" />
+                            <label for="user_id">User Id</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input id="password" name="password" type="password" ng-model="password" required="required" class="validate" autocomplete="false" />
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn" value="login" style="background-color: #3c6d77;">Login</button>
+                        </div>
+                        <div class="col right">
+                            <a  class="btn" ng-click="registerUser()" value="login" style="background-color: #3c6d77;">Register</a>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    </div>
+                </form>
+                </div>
+                </div>

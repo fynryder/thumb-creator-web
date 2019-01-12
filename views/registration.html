@@ -1,0 +1,41 @@
+
+ <div class="row">
+   <div id="signup" class="login col s12 m8 l4">
+      <div class="signup-screen">
+           <form class="form-register" method="post" name="register" novalidate ng-submit="validateAndSubmitForm()">
+           <div class="card">
+           	<nav style="background-color: #3c6d77;font-size: 1.4em"><span style="margin-left: 30px;margin-top: 5%;">{{loginStatus}}</span><span ng-show="loginStatus === 'Authenticating..'" class="saving" style="position:relative; 15px;bottom: 4px"><i>&nbsp;</i></span></nav>
+           <div class="card-content">
+	            <div class="input-field name">
+              <input id="first-name" type="text" class="validate" ng-model="userObject.firstName" required>
+              <label for="first-name">First Name</label>
+            </div>
+            <div class="input-field sname">
+              <input id="last-name" type="text" class="validate" ng-model="userObject.secondName"  required>
+              <label for="last-name">Last Name</label>
+             </div>
+             <div class="input-field email">
+              <input id="email" type="email" name="email" ng-model="userObject.email" class="validate" required>
+              <label for="email">Email</label>
+             </div>
+             <p class="alert alert-danger" ng-show="form-register.email.$error.email">Your email is invalid.</p>
+             <div class="input-field pass" >
+               <input id="password" type="password" name="password" ng-model="userObject.password" ng-minlength='6' class="validate" required>
+               <label for="password">Password</label>
+              </div>
+              <div class="input-field repass">
+               <input id="re-password" type="password" name="re-password" ng-model="userObject.confirmPassword" ng-minlength='6' class="validate" required>
+               <label for="password">Confirm Password</label>
+              </div>
+              <p class="alert alert-danger" ng-show="form-register.password.$error.minlength || form.password.$invalid">Your password must be at least 6 characters.</p>
+              <div class="space-top text-center">
+               <input type="submit" class="waves-effect  btn done" style="background-color: #3c6d77;"/>
+
+               </a>
+              </div>
+              </div></div>
+             </form>
+             
+           </div>
+        </div>
+    </div>

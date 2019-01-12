@@ -1,0 +1,10 @@
+
+<div class="container">
+    <div class="gallery" ng-repeat="image in images">
+        <a target="_blank" href="https://resized-thumbs.s3.ap-south-1.amazonaws.com/{{image.original_image}}">
+          <img ng-src="https://resized-thumbs.s3.ap-south-1.amazonaws.com/{{image.original_image}}" alt="Cinque Terre" width="300" height="200">
+        </a>
+        <div class="desc"><a target="_blank" href="https://resized-thumbs.s3.ap-south-1.amazonaws.com/{{image.original_image}}">Download</a></div>
+      </div>
+</div>    
+          
