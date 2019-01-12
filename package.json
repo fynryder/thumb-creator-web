@@ -11,6 +11,7 @@
     "angular-nicescroll": "0.0.0",
     "angular-ui-router": "~0.3.2",
     "aws-sdk": "^2.386.0",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.2",
     "crypto": "0.0.3",
     "dompurify": "~0.8.4",

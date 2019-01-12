@@ -8,6 +8,7 @@ var config = require('./config.json')
 const fileUpload = require('express-fileupload');
 const AWS = require('aws-sdk');
 const fs = require("fs");
+const bcrypt = require("bcrypt-nodejs");
  /* AWS.config.update({
     accessKeyId: 'accessKeyId',
     secretAccessKey: 'secretAccessKey',
@@ -141,6 +142,8 @@ var registerUser = function(req,res){
     var firstName = req.body.firstName;
     var secondName = req.body.secondName;
 
+    password = bcrypt.hashSync(password);
+
     var query = "INSERT INTO USERS(`firstName`,`secondName`,`email`,`password`) VALUES(?, ?, ?, ?)";
     var formattedQuery = mysql.format(query,[firstName,secondName,email.toLocaleLowerCase(),password]);
 
@@ -150,6 +153,7 @@ var registerUser = function(req,res){
                 status: "error",
                 message : "Error While Registration!!"
             });
+            c
         }
         else{
             res.send({
@@ -283,8 +287,8 @@ function loginUser(req,res){
 				return;
 			}
 			var passwordFromDB = result[0].password;
-			
-			if(password === passwordFromDB){
+			//var hash = bcrypt.hashSync(password);
+			if(bcrypt.compareSync(password, passwordFromDB)){
 				userData = {
 						userName : result[0].firstName,
 						userId : result[0].id,
