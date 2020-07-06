@@ -1,4 +1,4 @@
-# Project Title
+# Thumbnail Creator
 
 This project is web interface for thumb creator where user can register, login, and resize their images. It uses aws s3 as its cloud storage.
 
